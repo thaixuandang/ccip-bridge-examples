@@ -50,9 +50,9 @@ contract DeployToken is Script {
             console.log("Deployed BurnMintERC677 at:", tokenAddress);
         }
 
-        // Grant mint and burn roles to the deployer address
-        BurnMintERC677(tokenAddress).grantMintAndBurnRoles(deployer);
-        console.log("Granted mint and burn roles to:", deployer);
+        // // Grant mint and burn roles to the deployer address
+        // BurnMintERC677(tokenAddress).grantMintAndBurnRoles(deployer);
+        // console.log("Granted mint and burn roles to:", deployer);
 
         vm.stopBroadcast();
 

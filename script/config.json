@@ -1,17 +1,18 @@
 {
   "BnMToken": {
-    "name": "BnM KH",
-    "symbol": "BnMkh",
+    "name": "AI Agent Token by Virtuals",
+    "symbol": "AAT",
     "decimals": 18,
     "maxSupply": 0,
     "withGetCCIPAdmin": false,
-    "ccipAdminAddress": "0x0000000000000000000000000000000000000000"
+    "ccipAdminAddress": "0x0000000000000000000000000000000000000000",
+    "admin": "0xe322bb25312d2314614507C3Cf8d455B93ED1d1C"
   },
   "tokenAmountToMint": 1000000000000000000000,
   "tokenAmountToTransfer": 10000,
   "feeType": "native",
   "remoteChains": {
-    "43113": 421614,
-    "421614": 43113
+    "84532": 2021,
+    "2021": 84532
   }
 }

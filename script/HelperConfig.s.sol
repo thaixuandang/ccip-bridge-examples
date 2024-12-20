@@ -26,7 +26,9 @@ contract HelperConfig is Script {
             activeNetworkConfig = getAvalancheFujiConfig();
         } else if (block.chainid == 84532) {
             activeNetworkConfig = getBaseSepoliaConfig();
-        }
+        } else if (block.chainid == 2021) {
+            activeNetworkConfig = getRoninSaigonConfig();
+        } 
     }
 
     function getEthereumSepoliaConfig() public pure returns (NetworkConfig memory) {
@@ -41,6 +43,20 @@ contract HelperConfig is Script {
             nativeCurrencySymbol: "ETH"
         });
         return ethereumSepoliaConfig;
+    }
+
+    function getRoninSaigonConfig() public pure returns (NetworkConfig memory) {
+        NetworkConfig memory saigonConfig = NetworkConfig({
+            chainSelector: 13116810400804392105,
+            router: 0x0aCAe4e51D3DA12Dd3F45A66e8b660f740e6b820,
+            rmnProxy: 0xf206c6D3f3810eBbD75e7B4684291b5e51023D2f,
+            tokenAdminRegistry: 0x057879f376041D527a98327DE2Ec00F201c9cA25,
+            registryModuleOwnerCustom: 0xE31827cd24d7D419fC17E7Ff889BaF62A17991A0,
+            link: 0x5bB50A6888ee6a67E22afFDFD9513be7740F1c15,
+            confirmations: 2,
+            nativeCurrencySymbol: "RON"
+        });
+        return saigonConfig;
     }
 
     function getArbitrumSepolia() public pure returns (NetworkConfig memory) {

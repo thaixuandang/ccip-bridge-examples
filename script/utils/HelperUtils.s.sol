@@ -17,6 +17,8 @@ library HelperUtils {
             return "arbitrumSepolia";
         } else if (chainId == 84532) {
             return "baseSepolia";
+        } else if (chainId == 2021) {
+            return "roninSaigon";
         } else {
             revert("Unsupported chain ID");
         }
@@ -35,6 +37,8 @@ library HelperUtils {
             return helperConfig.getArbitrumSepolia();
         } else if (chainId == 84532) {
             return helperConfig.getBaseSepoliaConfig();
+        } else if (chainId == 2021) {
+            return helperConfig.getRoninSaigonConfig();
         } else {
             revert("Unsupported chain ID");
         }

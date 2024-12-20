@@ -30,7 +30,7 @@ contract AcceptAdminRole is Script {
         vm.startBroadcast();
 
         // Get the address of the signer (the account executing the script)
-        address signer = msg.sender;
+        (,address signer,) = vm.readCallers();
 
         // Instantiate the TokenAdminRegistry contract
         TokenAdminRegistry tokenAdminRegistryContract = TokenAdminRegistry(tokenAdminRegistry);
