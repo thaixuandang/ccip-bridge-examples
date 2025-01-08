@@ -26,8 +26,12 @@ contract HelperConfig is Script {
             activeNetworkConfig = getAvalancheFujiConfig();
         } else if (block.chainid == 84532) {
             activeNetworkConfig = getBaseSepoliaConfig();
+        } else if (block.chainid == 8453) {
+            activeNetworkConfig = getBaseMainnetConfig();
         } else if (block.chainid == 2021) {
             activeNetworkConfig = getRoninSaigonConfig();
+        } else if (block.chainid == 2020) {
+            activeNetworkConfig = getRoninMainnetConfig();
         } 
     }
 
@@ -57,6 +61,20 @@ contract HelperConfig is Script {
             nativeCurrencySymbol: "RON"
         });
         return saigonConfig;
+    }
+
+    function getRoninMainnetConfig() public pure returns (NetworkConfig memory) {
+        NetworkConfig memory roninConfig = NetworkConfig({
+            chainSelector: 6916147374840168594,
+            router: 0x46527571D5D1B68eE7Eb60B18A32e6C60DcEAf99,
+            rmnProxy: 0xceA253a8c2BB995054524d071498281E89aACD59,
+            tokenAdminRegistry: 0x90e83d532A4aD13940139c8ACE0B93b0DdbD323a,
+            registryModuleOwnerCustom: 0x5055DA89A16b71fEF91D1af323b139ceDe2d8320,
+            link: 0x3902228D6A3d2Dc44731fD9d45FeE6a61c722D0b,
+            confirmations: 2,
+            nativeCurrencySymbol: "RON"
+        });
+        return roninConfig;
     }
 
     function getArbitrumSepolia() public pure returns (NetworkConfig memory) {
@@ -99,5 +117,19 @@ contract HelperConfig is Script {
             nativeCurrencySymbol: "ETH"
         });
         return baseSepoliaConfig;
+    }
+
+    function getBaseMainnetConfig() public pure returns (NetworkConfig memory) {
+        NetworkConfig memory baseMainnetConfig = NetworkConfig({
+            chainSelector: 15971525489660198786,
+            router: 0x881e3A65B4d4a04dD529061dd0071cf975F58bCD,
+            rmnProxy: 0xC842c69d54F83170C42C4d556B4F6B2ca53Dd3E8,
+            tokenAdminRegistry: 0x6f6C373d09C07425BaAE72317863d7F6bb731e37,
+            registryModuleOwnerCustom: 0x1A5f2d0c090dDB7ee437051DA5e6f03b6bAE1A77,
+            link: 0x88Fb150BDc53A65fe94Dea0c9BA0a6dAf8C6e196,
+            confirmations: 2,
+            nativeCurrencySymbol: "ETH"
+        });
+        return baseMainnetConfig;
     }
 }

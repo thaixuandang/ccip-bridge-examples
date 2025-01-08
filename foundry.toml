@@ -13,11 +13,15 @@ remappings = [
 fs_permissions = [{ access = "read-write", path = "./" }]
 
 [rpc_endpoints]
+base = "https://mainnet.base.org"
 base-sepolia = "https://sepolia.base.org"
+ronin = "https://api.roninchain.com/rpc"
 ronin-saigon = "https://saigon-archive.roninchain.com/rpc"
 
 [etherscan]
-base-sepolia = { key = "${BASESCAN_API_KEY}", chain = 42161, url = "https://api-sepolia.basescan.org/api" }
+base = { key = "${BASESCAN_API_KEY}", chain = 8453, url = "https://api.basescan.org/api" }
+base-sepolia = { key = "${BASESCAN_API_KEY}", chain = 84532, url = "https://api-sepolia.basescan.org/api" }
+
 
 [profile.ronin]
 evm_version = "london"
