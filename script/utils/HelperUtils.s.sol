@@ -17,8 +17,12 @@ library HelperUtils {
             return "arbitrumSepolia";
         } else if (chainId == 84532) {
             return "baseSepolia";
+        } else if (chainId == 8453) {
+            return "base";
         } else if (chainId == 2021) {
             return "roninSaigon";
+        } else if (chainId == 2020) {
+            return "ronin";
         } else {
             revert("Unsupported chain ID");
         }
@@ -37,8 +41,12 @@ library HelperUtils {
             return helperConfig.getArbitrumSepolia();
         } else if (chainId == 84532) {
             return helperConfig.getBaseSepoliaConfig();
+        } else if (chainId == 8453) {
+            return helperConfig.getBaseMainnetConfig();
         } else if (chainId == 2021) {
             return helperConfig.getRoninSaigonConfig();
+        } else if (chainId == 2020) {
+            return helperConfig.getRoninMainnetConfig();
         } else {
             revert("Unsupported chain ID");
         }

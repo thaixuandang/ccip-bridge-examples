@@ -1,18 +1,20 @@
 {
   "BnMToken": {
-    "name": "AI Agent Token by Virtuals",
-    "symbol": "AAT",
+    "name": "JAIHOZ by Virtuals",
+    "symbol": "JAIHOZ",
     "decimals": 18,
     "maxSupply": 0,
     "withGetCCIPAdmin": false,
     "ccipAdminAddress": "0x0000000000000000000000000000000000000000",
-    "admin": "0xe322bb25312d2314614507C3Cf8d455B93ED1d1C"
+    "admin": "0x1616B2d187fca3D160F3521b75085837114d723E"
   },
   "tokenAmountToMint": 1000000000000000000000,
   "tokenAmountToTransfer": 10000,
   "feeType": "native",
   "remoteChains": {
     "84532": 2021,
-    "2021": 84532
+    "2021": 84532,
+    "8453": 2020,
+    "2020": 8453
   }
 }
